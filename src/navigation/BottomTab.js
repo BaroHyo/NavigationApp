@@ -24,11 +24,21 @@ export default function BottomTab() {
         name="TopTab"
         component={TopTab}
         options={{
-          headerLeft: ({}) => (
+          headerLeft: () => (
             <Pressable onPress={() => navigation.openDrawer()}>
               <FontAwesome
                 name="align-left"
                 style={{ marginLeft: 15 }}
+                size={28}
+                color={Colors.secondary}
+              />
+            </Pressable>
+          ),
+          headerRight: () => (
+            <Pressable onPress={() => navigation.navigate('Settings')}>
+              <FontAwesome
+                name="cog"
+                style={{ marginRight: 15 }}
                 size={28}
                 color={Colors.secondary}
               />
